@@ -1,0 +1,17 @@
+
+
+body {
+    /*color: red*/
+}
+
+div[data-visibility=true] {
+    color: red
+}
+
+div[data-visibility=false] {
+    color: green
+}
+
+div[data-visibility=null] {
+    color: blue
+}

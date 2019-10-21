@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
@@ -25,6 +25,14 @@ const MainPage = props => {
                 history.push(String(id));
             });
     };
+
+    useEffect(() => {
+        setTimeout(() => {
+            document.querySelectorAll('[data-visibility=false]').forEach(el => {
+                el.setAttribute('data-visibility', 'null')
+            })
+        }, 5000);
+    }, []);
 
     const getMovies = () => {
         return movies.map(m => {

@@ -23,6 +23,9 @@ const App = props => {
 
     return (
         <Fragment>
+            <div data-visibility="true">Hello1</div>
+            <div data-visibility="false">Hello2</div>
+            <div data-visibility="true">Hello3</div>
             <h1>Router is working...</h1>
             <Router history={history}>
                 <Switch>
