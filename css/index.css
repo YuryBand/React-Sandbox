@@ -15,3 +15,7 @@ div[data-visibility=false] {
 div[data-visibility=null] {
     color: blue
 }
+
+#portal_header, #portal_footer {
+    background-color: aqua;
+}
