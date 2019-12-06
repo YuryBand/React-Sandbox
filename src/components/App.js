@@ -16,6 +16,7 @@ import { setMovies, fetchMoviesList } from '../actions/actionCreators';
 
 const history = createBrowserHistory();
 
+
 const App = props => {
 
     const {
@@ -28,6 +29,14 @@ const App = props => {
     useEffect(() => {
         props.actions.fetchMoviesList('https://the-one-api.herokuapp.com/v1/movie');
     }, [ ]);
+
+    const arr0 = [ 1, 17, 35 ];
+
+    const arr1 = [ 1, 17, 35 ];
+
+    [ arr1[0], arr1[2] ] = [ arr1[2], arr1[0] ];
+
+    const [ a, b ] = [ 9, 99 ];
 
     return (
         <Fragment>
@@ -42,6 +51,9 @@ const App = props => {
             <div data-visibility="true">Hello1</div>
             <div data-visibility="false">Hello2</div>
             <div data-visibility="true">Hello3</div>
+            <div>{ arr0.join(' - ') }</div>
+            <div>{ arr1.join(' - ') }</div>
+            <div>{ a } &nbsp; { b }</div>
             <h1>Router is working...</h1>
             <Router history={history}>
                 <Switch>

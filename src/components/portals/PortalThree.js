@@ -16,7 +16,7 @@ const PortalThree = () => {
     };
 
     return (
-        <div>
+        <div style={{ border: `5px solid green` }}>
             <p>{ `Counter: ${counter}` }</p>
             <button onClick={handleClick}>{ interval ? 'Stop' : 'Start' }</button>
         </div>
